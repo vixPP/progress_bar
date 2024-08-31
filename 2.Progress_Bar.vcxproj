@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2.Progress_Bar.cpp" />
-    <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Timer.h" />

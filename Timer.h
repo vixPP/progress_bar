@@ -1,16 +1,21 @@
 #pragma once
 #include <chrono>
-#include <iostream>
 
-class SimpleTimer
+class Timer 
 {
 public:
-	SimpleTimer();
-	~SimpleTimer();
+    Timer() 
+    {
+        start = std::chrono::high_resolution_clock::now();
+    }
 
+    double elapsed() 
+    {
+        std::chrono::high_resolution_clock::time_point end = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> duration = end - start;
+        return duration.count();
+    }
 
 private:
-
-	std::chrono::time_point<std::chrono::steady_clock> start, end;
-	std::chrono::duration<float> duration;
+    std::chrono::high_resolution_clock::time_point start;
 };
